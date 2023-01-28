@@ -12,9 +12,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 #Path to hombrew installs
 export PATH=/opt/homebrew/bin:$PATH
 
-#Kitty
-export KITTY_CONFIG_DIRECTORY="$HOME/dotfiles/kitty/"
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
