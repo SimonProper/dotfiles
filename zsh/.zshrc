@@ -111,6 +111,7 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="nvim ~/dotfiles/zsh/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias nvimconfig="nvim ~/.config/nvim"
+alias nvconf="nvim ~/.config/nvim"
 alias pn="pnpm"
 alias kittyconfig="nvim ~/dotfiles/kitty/kitty.conf"
 alias nv='nvim'
