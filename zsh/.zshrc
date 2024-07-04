@@ -74,3 +74,7 @@ if [ -f '/Users/simonproper/Documents/google-cloud-sdk/completion.zsh.inc' ]; th
 
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/zsh//.p10k.zsh.
 [[ ! -f ~/dotfiles/zsh//.p10k.zsh ]] || source ~/dotfiles/zsh//.p10k.zsh
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
