@@ -16,4 +16,4 @@ source "/Users/[username]/dotfiles/zsh/.zshrc"
 ```shell
 export GITHUB_NPM_TOKEN="some magic github token"
 ```
-5. If using Kitty, we need to link the default kitty directory to the one provided in this repo. First, make sure that the directory `~/.config` does not cotain a /kitty directory. Then use the command `ln -s ~/dotfiles/kitty/ ~/.config/kitty/`
+5. If using Kitty, we need to link the default kitty directory to the one provided in this repo. First, make sure that the directory `~/.config` does not cotain a /kitty directory. Then use the command `ln -s ~/dotfiles/kitty/ ~/.config/kitty`
