@@ -5,6 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
 # Paths
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -16,7 +17,7 @@ export PATH=/opt/homebrew/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 
 # pnpm
-export PNPM_HOME="/Users/simon.proper/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
@@ -48,11 +49,11 @@ alias gs="git switch"
 
  lazynvm() {
    unset -f nvm node npm
-   export NVM_DIR=~/.nvm
+   export NVM_DIR=$HOME/.nvm
    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
  }
 
- export NVM_DIR=~/.nvm
+ export NVM_DIR=$HOME/.nvm
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
  nvm() {
