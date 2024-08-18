@@ -20,6 +20,9 @@ export PNPM_HOME="/Users/simon.proper/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
+# For lazygit
+export XDG_CONFIG_HOME="$HOME/dotfiles"
+
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
