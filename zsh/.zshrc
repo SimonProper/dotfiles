@@ -16,6 +16,9 @@ export PATH=/opt/homebrew/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Volta
+export VOLTA_HOME="$HOME/.volta"
+
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
@@ -47,30 +50,6 @@ alias vim='nvim --listen /tmp/nvim-server.pipe'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
- lazynvm() {
-   unset -f nvm node npm
-   export NVM_DIR=$HOME/.nvm
-   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
- }
-
- export NVM_DIR=$HOME/.nvm
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
- nvm() {
-   lazynvm 
-   nvm $@
- }
-
- node() {
-   lazynvm
-   node $@
- }
-
- npm() {
-   lazynvm
-   npm $@
- }
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/simonproper/Documents/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/simonproper/Documents/google-cloud-sdk/path.zsh.inc'; fi
