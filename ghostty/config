@@ -1,3 +1,4 @@
 font-family = CaskaydiaCove Nerd Font
 macos-titlebar-style = tabs
 shell-integration = zsh
+custom-shader = shaders/cursor_smear.glsl
