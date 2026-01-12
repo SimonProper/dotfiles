@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 os:
-  editCommand: "nvim"
-  edit: nvim --server /tmp/nvim-server.pipe --remote-send '<cmd>lua require("lazygit-open-file")({{filename}}, {{line}})<CR>'
-  open: nvim --server /tmp/nvim-server.pipe --remote-send '<cmd>lua require("lazygit-open-file")({{filename}}, {{line}})<CR>'
+  # editCommand: "nvim"
+  edit: 'nvim --server /tmp/nvim-server.pipe --remote-send "<cmd>lua require(\"lazygit-open-file\")([[{{filename}}]], {{line}})<CR>"'
+  open: 'nvim --server /tmp/nvim-server.pipe --remote-send "<cmd>lua require(\"lazygit-open-file\")([[{{filename}}]], {{line}})<CR>"'
 
 git:
   paging:
