@@ -5,8 +5,8 @@ os:
   open: 'nvim --server /tmp/nvim-server.pipe --remote-send "<cmd>lua require(\"lazygit-open-file\")([[{{filename}}]], {{line}})<CR>"'
 
 git:
-  paging:
-    externalDiffCommand: "difft --color=always"
+  pagers:
+    - externalDiffCommand: "difft --color=always"
 customCommands:
   # retrieved from: https://github.com/jesseduffield/lazygit/wiki/Custom-Commands-Compendium#conventional-commit
   - key: "<c-v>"
