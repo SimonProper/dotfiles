@@ -44,9 +44,9 @@ alias nvimconfig="nvim ~/.config/nvim"
 alias nvconf="nvim ~/.config/nvim"
 alias pn="pnpm"
 alias kittyconfig="nvim ~/dotfiles/kitty/kitty.conf"
-alias nv="nvim --listen /tmp/nvim-server.pipe"
+alias nv="nvim"
 alias gs="git switch"
-alias vim='nvim --listen /tmp/nvim-server.pipe'
+alias vim='nvim'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
