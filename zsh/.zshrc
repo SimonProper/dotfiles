@@ -24,6 +24,9 @@ export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
+# Cursor CLI
+export PATH="$HOME/.local/bin:$PATH"
+
 # For lazygit
 export XDG_CONFIG_HOME="$HOME/dotfiles"
 
