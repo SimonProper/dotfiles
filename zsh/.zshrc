@@ -24,6 +24,13 @@ export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
+# bun completions
+[ -s "/Users/simon/.bun/_bun" ] && source "/Users/simon/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 # Cursor CLI
 export PATH="$HOME/.local/bin:$PATH"
 
