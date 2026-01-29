@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
-os:
-  # editCommand: "nvim"
-  edit: 'nvim --server "$NVIM_LISTEN_ADDRESS" --remote-send "<cmd>lua require(\"lazygit-open-file\")([[{{filename}}]], {{line}})<CR>"'
-  open: 'nvim --server "$NVIM_LISTEN_ADDRESS" --remote-send "<cmd>lua require(\"lazygit-open-file\")([[{{filename}}]], {{line}})<CR>"'
+# os:
+# editCommand: "nvim"
+# edit: 'nvim --server "$NVIM_LISTEN_ADDRESS" --remote-send "<cmd>lua require(\"lazygit-open-file\")([[{{filename}}]], {{line}})<CR>"'
+# open: 'nvim --server "$NVIM_LISTEN_ADDRESS" --remote-send "<cmd>lua require(\"lazygit-open-file\")([[{{filename}}]], {{line}})<CR>"'
 
 git:
   pagers:
@@ -72,3 +72,12 @@ customCommands:
         body: "Are you sure you want to commit?"
     command: "git commit --message '{{.Form.Type}}{{ if .Form.Scope }}({{ .Form.Scope }}){{ end }}{{.Form.Breaking}}: {{.Form.Message}}'"
     loadingText: "Creating conventional commit..."
+  - key: "e"
+    context: "files"
+    description: "Open in Neovim"
+    output: "none"
+    command: >
+      /bin/zsh -c '
+      if [ -n "$1" ] && [ -f "$1" ]; then
+        nvim --server "$NVIM" --remote-send "<cmd>lua require(\"lazygit-open-file\")([===[$1]===], 1)<CR>";
+      fi' -- '{{if .SelectedFile}}{{.SelectedFile.Name}}{{end}}'
