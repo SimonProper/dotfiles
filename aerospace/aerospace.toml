@@ -207,9 +207,6 @@ automatically-unhide-macos-hidden-apps = false
 
 ### CUSTOM CONFIG ###
 [[on-window-detected]]
-    check-further-callbacks = true
-    run = 'layout floating'
-[[on-window-detected]]
     if.app-id = 'com.mitchellh.ghostty'
     run = ['layout tiling', 'move-node-to-workspace 3'] # Always have terminals on workspace 3 
 
