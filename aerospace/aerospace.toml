@@ -37,6 +37,24 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
 automatically-unhide-macos-hidden-apps = false
 
+# Pin secondary workspaces to non-main monitor
+[workspace-to-monitor-force-assignment]
+    11 = ['secondary', 'main']
+    12 = ['secondary', 'main']
+    13 = ['secondary', 'main']
+    14 = ['secondary', 'main']
+    15 = ['secondary', 'main']
+    16 = ['secondary', 'main']
+    17 = ['secondary', 'main']
+    18 = ['secondary', 'main']
+    19 = ['secondary', 'main']
+    S2 = ['secondary', 'main']
+    M2 = ['secondary', 'main']
+    N2 = ['secondary', 'main']
+    C2 = ['secondary', 'main']
+    I2 = ['secondary', 'main']
+    F2 = ['secondary', 'main']
+
 # Possible values: (qwerty|dvorak|colemak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]
@@ -181,6 +199,52 @@ automatically-unhide-macos-hidden-apps = false
     alt-tab = 'workspace-back-and-forth'
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+
+    # --- Monitor navigation ---
+    ctrl-alt-h = 'focus-monitor left'
+    ctrl-alt-j = 'focus-monitor down'
+    ctrl-alt-k = 'focus-monitor up'
+    ctrl-alt-l = 'focus-monitor right'
+
+    # --- Move window to adjacent monitor ---
+    ctrl-alt-shift-h = 'move-node-to-monitor left'
+    ctrl-alt-shift-j = 'move-node-to-monitor down'
+    ctrl-alt-shift-k = 'move-node-to-monitor up'
+    ctrl-alt-shift-l = 'move-node-to-monitor right'
+
+    # === Secondary monitor workspaces (ctrl+alt+N) ===
+    ctrl-alt-1 = 'workspace 11'
+    ctrl-alt-2 = 'workspace 12'
+    ctrl-alt-3 = 'workspace 13'
+    ctrl-alt-4 = 'workspace 14'
+    ctrl-alt-5 = 'workspace 15'
+    ctrl-alt-6 = 'workspace 16'
+    ctrl-alt-7 = 'workspace 17'
+    ctrl-alt-8 = 'workspace 18'
+    ctrl-alt-9 = 'workspace 19'
+    ctrl-alt-s = 'workspace S2'
+    ctrl-alt-m = 'workspace M2'
+    ctrl-alt-n = 'workspace N2'
+    ctrl-alt-c = 'workspace C2'
+    ctrl-alt-i = 'workspace I2'
+    ctrl-alt-f = 'workspace F2'
+
+    # === Secondary monitor move-to (ctrl+alt+shift+N) ===
+    ctrl-alt-shift-1 = 'move-node-to-workspace 11'
+    ctrl-alt-shift-2 = 'move-node-to-workspace 12'
+    ctrl-alt-shift-3 = 'move-node-to-workspace 13'
+    ctrl-alt-shift-4 = 'move-node-to-workspace 14'
+    ctrl-alt-shift-5 = 'move-node-to-workspace 15'
+    ctrl-alt-shift-6 = 'move-node-to-workspace 16'
+    ctrl-alt-shift-7 = 'move-node-to-workspace 17'
+    ctrl-alt-shift-8 = 'move-node-to-workspace 18'
+    ctrl-alt-shift-9 = 'move-node-to-workspace 19'
+    ctrl-alt-shift-s = 'move-node-to-workspace S2'
+    ctrl-alt-shift-m = 'move-node-to-workspace M2'
+    ctrl-alt-shift-n = 'move-node-to-workspace N2'
+    ctrl-alt-shift-c = 'move-node-to-workspace C2'
+    ctrl-alt-shift-i = 'move-node-to-workspace I2'
+    ctrl-alt-shift-f = 'move-node-to-workspace F2'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
