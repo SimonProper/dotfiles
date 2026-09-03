@@ -1,0 +1,33 @@
+onboarding = false
+[ui]
+agent_panel_sort = "spaces"
+
+[theme]
+name = "kanagawa"
+auto_switch = false
+
+[keys]
+# Worktrees stack vertically in the sidebar: j/k walks, digits jump
+previous_workspace = "ctrl+shift+k"
+next_workspace     = "ctrl+shift+j"
+switch_workspace   = "ctrl+shift+1..9"
+workspace_picker   = "ctrl+shift+w"
+new_worktree       = "ctrl+shift+g"
+open_worktree      = "ctrl+shift+o"
+
+# Terminal roles run horizontally in the tab bar: h/l walks, digits jump
+previous_tab = "ctrl+shift+h"
+next_tab     = "ctrl+shift+l"
+switch_tab   = "ctrl+1..9"
+new_tab      = "ctrl+shift+c"
+
+# Panes within a role
+focus_pane_left  = "ctrl+shift+left"
+focus_pane_down  = "ctrl+shift+down"
+focus_pane_up    = "ctrl+shift+up"
+focus_pane_right = "ctrl+shift+right"
+split_vertical   = "ctrl+shift+v"
+split_horizontal = "ctrl+shift+minus"
+close_pane       = "ctrl+shift+x"
+zoom             = "ctrl+shift+z"
+toggle_sidebar   = "ctrl+shift+b"
