@@ -31,9 +31,6 @@ export PATH="$PNPM_HOME:$PATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# Cursor CLI
-export PATH="$HOME/.local/bin:$PATH"
-
 # For lazygit
 export XDG_CONFIG_HOME="$HOME/dotfiles"
 
