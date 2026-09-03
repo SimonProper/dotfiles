@@ -1,2 +1,33 @@
+# XDG_CONFIG_HOME points at this repo (see zsh/.zshrc), so every XDG-aware
+# tool writes its state here alongside our config: logs, sockets, caches,
+# lockfiles, downloaded packs. Rules below are per-tool because there's no
+# way to predict what the next tool drops in -- check `git status` before
+# `git add -A`, and add a rule when a new tool shows up uninvited.
+
 .DS_Store
 nvim
+
+# --- generic tool state, any directory ---
+*.log
+*.sock
+*.bak
+node_modules/
+
+# --- fully tool-managed dirs (nothing of ours lives here) ---
+gh/
+homebrew/
+uv/
+
+# --- nono: profiles/ is ours, the rest is managed by `nono` ---
+nono/packages/
+nono/profile-drafts/
+nono/pack-update-hints.json
+
+# --- herdr: config.toml + scaffold-worktree.sh are ours ---
+herdr/session.json
+herdr/release-notes.json
+herdr/.plugins.lock
+
+# --- opencode: absolute symlinks generated into nono/packages/ ---
+opencode/plugins/
+opencode/skills/
