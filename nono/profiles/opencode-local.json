@@ -1,0 +1,19 @@
+{
+  "extends": "opencode",
+  "meta": {
+    "name": "opencode-local",
+    "version": "1.0.0",
+    "description": "Local overlay on the always-further/opencode pack profile",
+    "author": "simon"
+  },
+  "filesystem": {
+    "allow": [
+      "$HOME/.agents",
+      "$XDG_CONFIG_HOME/opencode"
+    ],
+    "read": [
+      "$XDG_CONFIG_HOME/gh"
+    ]
+  },
+  "workdir": { "access": "readwrite" }
+}

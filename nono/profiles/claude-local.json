@@ -1,0 +1,18 @@
+{
+  "extends": "claude",
+  "meta": {
+    "name": "claude-local",
+    "version": "1.0.0",
+    "description": "Local overlay on the always-further/claude pack profile",
+    "author": "simon"
+  },
+  "filesystem": {
+    "allow": [
+      "$HOME/.agents"
+    ],
+    "read": [
+      "$XDG_CONFIG_HOME/gh"
+    ]
+  },
+  "workdir": { "access": "readwrite" }
+}
