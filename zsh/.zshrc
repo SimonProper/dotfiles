@@ -58,6 +58,12 @@ alias nv="nvim"
 alias gs="git switch"
 alias vim='nvim'
 
+# herdr hardcodes TERM=xterm-256color (herdr#554), which has no Setulc, so
+# nvim can't color diagnostic underlines. Restore Ghostty's own entry.
+if [[ -n "$HERDR_ENV" && "$TERM" == "xterm-256color" && "$TERM_PROGRAM" == "ghostty" ]]; then
+  export TERM=xterm-ghostty
+fi
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
