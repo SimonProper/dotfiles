@@ -14,5 +14,6 @@
       "$XDG_CONFIG_HOME/gh"
     ]
   },
-  "workdir": { "access": "readwrite" }
+  "workdir": { "access": "readwrite" },
+  "allow_gpu": true
 }
