@@ -90,7 +90,7 @@ _nono_split() {
       --bypass-protection=*|--suppress-save-prompt=*|--workdir=*|--extends=*|\
       --allow-domain=*|--deny-domain=*|--network-profile=*)
         _nono_grants+=("$1"); shift ;;
-      --allow-cwd|--block-net)
+      --allow-cwd|--block-net|--allow-gpu|--allow-launch-services)
         _nono_grants+=("$1"); shift ;;
       *) break ;;
     esac
