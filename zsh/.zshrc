@@ -96,6 +96,22 @@ _nono_split() {
     esac
   done
   _nono_args=("$@")
+  _nono_worktree_grant
+}
+
+# In a linked worktree git writes to the main repo's .git (index, objects,
+# refs, lfs/tmp), which --allow-cwd doesn't cover. Grant that dir, and only
+# that dir. A checkout's .git file can point anywhere, so the target must sit
+# under ~/Developer (git returns the realpath, symlinks resolved).
+# ponytail: grant covers the whole session, not just git; move to nono
+# command_policies with @git:common-dir if that ever matters.
+_nono_worktree_grant() {
+  local common gitdir
+  common=$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null) || return 0
+  gitdir=$(git rev-parse --path-format=absolute --git-dir)
+  [[ $common != $gitdir && $common == ${HOME:A}/Developer/* ]] &&
+    _nono_grants+=(--allow "$common")
+  return 0
 }
 
 claude() {
