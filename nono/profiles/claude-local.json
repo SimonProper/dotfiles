@@ -1,5 +1,5 @@
 {
-  "extends": "claude",
+  "extends": "claude-pack",
   "meta": {
     "name": "claude-local",
     "version": "1.0.0",
@@ -8,10 +8,12 @@
   },
   "filesystem": {
     "allow": [
-      "$HOME/.agents"
+      "$HOME/.agents",
+      "$XDG_CONFIG_HOME/agents"
     ],
     "read": [
-      "$XDG_CONFIG_HOME/gh"
+      "$XDG_CONFIG_HOME/gh",
+      "$HOME/.local/share/gh"
     ]
   },
   "workdir": { "access": "readwrite" },

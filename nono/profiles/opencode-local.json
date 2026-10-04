@@ -1,5 +1,5 @@
 {
-  "extends": "opencode",
+  "extends": "opencode-pack",
   "meta": {
     "name": "opencode-local",
     "version": "1.0.0",
@@ -9,10 +9,12 @@
   "filesystem": {
     "allow": [
       "$HOME/.agents",
+      "$XDG_CONFIG_HOME/agents",
       "$XDG_CONFIG_HOME/opencode"
     ],
     "read": [
-      "$XDG_CONFIG_HOME/gh"
+      "$XDG_CONFIG_HOME/gh",
+      "$HOME/.local/share/gh"
     ]
   },
   "workdir": { "access": "readwrite" },
