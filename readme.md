@@ -31,3 +31,9 @@ ln -s ~/dotfiles/kitty/ ~/.config/kitty
 ```shell
 ln -s ~/.config/nvim ~/dotfiles/nvim
 ```
+
+7. Link the agent skills (Claude Code, OpenCode, Codex). See `agents/readme.md`.
+
+```shell
+~/dotfiles/agents/setup.sh
+```
