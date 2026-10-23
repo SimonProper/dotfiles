@@ -63,6 +63,14 @@ if [[ -n "$HERDR_ENV" && "$TERM" == "xterm-256color" && "$TERM_PROGRAM" == "ghos
   export TERM=xterm-ghostty
 fi
 
+# Ghostty only auto-loads its zsh integration into the shell it spawns itself.
+# herdr spawns its own pane shells, so the integration (and with it the
+# bar-at-prompt / block-in-vicmd cursor shapes) is missing there. Load it by
+# hand; the script is idempotent, so the top-level Ghostty shell is unaffected.
+if [[ -n "$GHOSTTY_RESOURCES_DIR" ]]; then
+  builtin source "$GHOSTTY_RESOURCES_DIR/shell-integration/zsh/ghostty-integration"
+fi
+
 # nono sandbox wrappers.
 # Standing grants live in the profiles at $XDG_CONFIG_HOME/nono/profiles/
 # (claude-local, opencode-local). These wrappers only add one-off grants:
