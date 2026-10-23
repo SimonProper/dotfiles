@@ -136,6 +136,16 @@ opencode() {
     "${_nono_grants[@]}" -- opencode "${_nono_args[@]}"
 }
 
+# git worktree helpers
+# add a worktree to existing branch already exists with gwta from oh my zsh
+# add a new branch and worktree
+ gwtn() {
+  git worktree add -b "$1" "../$(basename $PWD)-worktrees/$1" main &&
+  cd "../$(basename $PWD)-worktrees/$1"
+}
+alias gwtl='git worktree list'
+alias gwtr='git worktree remove'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
