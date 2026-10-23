@@ -13,7 +13,8 @@
     ],
     "read": [
       "$XDG_CONFIG_HOME/gh",
-      "$HOME/.local/share/gh"
+      "$HOME/.local/share/gh",
+      "$HOME/.volta"
     ]
   },
   "workdir": { "access": "readwrite" },
